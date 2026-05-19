@@ -27,7 +27,12 @@ void bazaEvent(int *guessed, int *almostGuessed, int *didntGuessed, int *money, 
 
 } 
 
-
+void shopEvent(int *money, struct activeAbilites abilityPool, int difficulty){
+    printf("МАГАЗИН\n");
+    *money -= 5 + rand()%(51+difficulty*difficulty-4);
+    printf("Ваш баланс: %d",*money);
+    
+}
 
 int main(){
 
