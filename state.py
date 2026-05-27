@@ -1,5 +1,4 @@
 from random import randint
-from config import ABILITIES_DATA, GIMN_DATA, WEAPONS, WEAPON_PRICES, BOSS_NAMES
 
 class GameState:
     def __init__(self, difficulty: int):
