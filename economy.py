@@ -298,13 +298,13 @@ def open_lootbox(state, box_type: str):
     
     # Выбор содержимого
     if box_type == '()':
-        st = randi([0] * 75 + [WEAPONS[randint(0, len(WEAPONS) - 1)][0] for _ in range(5)] + [dich + norm][randint(0, len(dich + norm) - 1)] for _ in range(8)] + [randint(1, 50) for _ in range(12)])
+        st = randi([0] * 75 + [WEAPONS[randint(0, len(WEAPONS) - 1)][0] for _ in range(5)] + [dich + norm][randint(0, len(dich + norm) - 1)] for _ in range(8) + [randint(1, 50) for _ in range(12)])
     elif box_type == '{}':
-        st = randi([0] * 50 + [WEAPONS[randint(0, len(WEAPONS) - 1)][randint(0, 1)] for _ in range(12)] + [norm + horosh][randint(0, len(norm + horosh) - 1)] for _ in range(18)] + [randint(25, 100) for _ in range(20)])
+        st = randi([0] * 50 + [WEAPONS[randint(0, len(WEAPONS) - 1)][randint(0, 1)] for _ in range(12)] + [norm + horosh][randint(0, len(norm + horosh) - 1)] for _ in range(18) + [randint(25, 100) for _ in range(20)])
     elif box_type == '[]':
-        st = randi([0] * 25 + [WEAPONS[randint(0, len(WEAPONS) - 1)][1] for _ in range(26)] + [horosh + imba][randint(0, len(horosh + imba) - 1)] for _ in range(34)] + [randint(80, 200) for _ in range(15)])
+        st = randi([0] * 25 + [WEAPONS[randint(0, len(WEAPONS) - 1)][1] for _ in range(26)] + [horosh + imba][randint(0, len(horosh + imba) - 1)] for _ in range(34) + [randint(80, 200) for _ in range(15)])
     else:  # [||]
-        st = randi([WEAPONS[randint(0, len(WEAPONS) - 1)][randint(1, 2)] for _ in range(40)] + [imba2 + imba][randint(0, len(imba2 + imba) - 1)] for _ in range(50)] + [randint(125, 450) for _ in range(10)])
+        st = randi([WEAPONS[randint(0, len(WEAPONS) - 1)][randint(1, 2)] for _ in range(40)] + [imba2 + imba][randint(0, len(imba2 + imba) - 1)] for _ in range(50) + [randint(125, 450) for _ in range(10)])
     
     # Обработка выпадения (аналогично box1-box4)
     # ... (слишком длинно, но логика та же)

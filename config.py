@@ -1,5 +1,5 @@
 from random import randint, choice
-from config import WEAPONS, BOSS_NAMES
+
 from utils import entry, entrys, sus
 # Способности: [название, количество для покупки, цена]
 ABILITIES_DATA = [
