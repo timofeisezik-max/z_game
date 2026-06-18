@@ -10,7 +10,8 @@ def use_slon(state, target: int):
     if state.passives[9] == 1:
         game_amulet(state, input().split(), 1 + state.dif, target)
     else:
-        game_basic(state, int(input()), target)
+        guess = input("Введите число: ")
+        game_basic(state, int(guess), target)
 
 def use_genocide(state, raw_input: str, target: int):
     """Геноцид — стреляем по списку чисел"""
@@ -75,7 +76,7 @@ def use_discriminant(state, target: int):
     if state.passives[0] == 1:
         print('Для балбесов: ответ -', D[1])
     print('Ответ:(jn меньшего к большему, без пробелов)', end=' ')
-    otv = input()
+    otv = input("Ответ (от меньшего к большему, без пробелов): ")
     if otv == D[1]:
         print(f'Неплох, держи 60^2/120*dif', state.get_currency())
         state.money += (30 * state.dif) * state.money_sign()
